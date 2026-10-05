@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mariya Frolikova Portfolio</title>
-<meta name="description" content="Marketing portfolio of Mariya Frolikova: brand, packaging and social work for Teafusion, plus developer guides on dev.to.">
+<meta name="description" content="Portfolio of Mariya Frolikova: product videos and developer guides on a calendar scheduling API, plus brand, packaging and social work for Teafusion.">
 <link rel="canonical" href="https://mariyafrolikova.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mariyafrolikova.github.io/">
 <meta property="og:title" content="Mariya Frolikova Portfolio">
-<meta property="og:description" content="Marketing portfolio of Mariya Frolikova: brand, packaging and social work for Teafusion, plus developer guides on dev.to.">
+<meta property="og:description" content="Portfolio of Mariya Frolikova: product videos and developer guides on a calendar scheduling API, plus brand, packaging and social work for Teafusion.">
 <meta property="og:image" content="https://mariyafrolikova.github.io/etsy-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
@@ -112,6 +112,7 @@ figure img.logo-tile{aspect-ratio:1;object-fit:contain;padding:28px;background:v
 figcaption{font-size:.88rem;color:var(--muted)}
 .video{max-width:320px;aspect-ratio:9/16;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--sage)}
 .video iframe{width:100%;height:100%;border:0;display:block}
+.video.wide{max-width:none;aspect-ratio:16/9}
 
 /* Articles */
 .articles{display:grid;border-top:1px solid var(--line)}
@@ -185,6 +186,13 @@ footer a:hover{color:var(--accent)}
       </ul>
     </div>
     <div class="group">
+      <a class="proj" href="#videos">Product videos</a>
+      <ul>
+        <li><a href="#scheduler-intro">Embedded Scheduler intro</a></li>
+        <li><a href="#scheduler-install">Install and embed</a></li>
+      </ul>
+    </div>
+    <div class="group">
       <a class="proj" href="#writing">dev.to articles</a>
       <ul>
         <li><a href="#push">Push Notifications guide</a></li>
@@ -197,8 +205,8 @@ footer a:hover{color:var(--accent)}
   <header id="about" class="view" data-key="about">
     <p class="label">Portfolio</p>
     <h1>Mariya Frolikova</h1>
-    <p class="headline">Brand, social and developer content</p>
-    <p class="intro">I co-founded Teafusion, a loose-leaf tea brand, where I designed the logo and worked on the packaging, social posts and ads. In my day job, I work as a Support Engineer, where I am passionate about getting involved in the comms we send out, including email updates and writing developer marketing guides.</p>
+    <p class="headline">Product videos, developer guides and brand work</p>
+    <p class="intro">In my day job, I work as a Support Engineer at Cronofy, where I'm involved in the comms we send out, including email updates, developer guides and product videos for our docs. I also co-founded Teafusion, a loose-leaf tea brand, where I designed the logo and worked on the packaging, social posts and ads.</p>
     <div class="links">
       <a href="https://www.linkedin.com/in/mariyafrolikova/">LinkedIn <span aria-hidden="true">↗</span></a>
       <a href="https://dev.to/mariyafro">dev.to <span aria-hidden="true">↗</span></a>
@@ -213,6 +221,17 @@ footer a:hover{color:var(--accent)}
             <strong>Teafusion</strong>
             <span class="desc">Logo, packaging art, social posts and ads for a loose-leaf tea brand I co-founded.</span>
             <span class="more">View work <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="project" href="#videos">
+          <div class="cover text" aria-hidden="true">
+            <span>Embedded Scheduler: introduction</span>
+            <span>Embedded Scheduler: install and embed</span>
+          </div>
+          <div class="body">
+            <strong>Product videos</strong>
+            <span class="desc">Short videos for a scheduling API's developer docs.</span>
+            <span class="more">Watch the videos <span aria-hidden="true">→</span></span>
           </div>
         </a>
         <a class="project" href="#writing">
@@ -283,7 +302,7 @@ footer a:hover{color:var(--accent)}
 
     <div class="sub">
       <h3 id="packaging">Packaging art</h3>
-      <p>Artwork for each blend's tin, built around its ingredients.</p>
+      <p>Artwork for each blend's tin, showing its ingredients.</p>
       <div class="ads two feature">
         <figure>
           <img src="pack-energlow.jpg" alt="Painterly packaging artwork for Energlow Fusion: a close-up scene of the blend's ingredients." width="1200" height="686" loading="lazy">
@@ -321,7 +340,7 @@ footer a:hover{color:var(--accent)}
       <div class="ads two">
         <figure>
           <img src="ad-blends.png" alt="Meta ad showing seven Teafusion blends as cut-out photos of loose leaf tea, each labelled in curved type, under the line Loose leaf. No compromises." width="900" height="900" loading="lazy">
-          <figcaption>The range, led by the ingredients</figcaption>
+          <figcaption>The whole range</figcaption>
         </figure>
         <figure>
           <img src="ad-offer.png" alt="Meta ad reading Explore the blends, with a browser window linking to teafusion.co and the offer 30% off first order and a free Teafuser." width="900" height="900" loading="lazy">
@@ -332,7 +351,7 @@ footer a:hover{color:var(--accent)}
 
     <div class="sub">
       <h3 id="product">Product ads</h3>
-      <p>One per blend, led by its benefits.</p>
+      <p>One ad per blend, with its benefits.</p>
       <div class="ads">
         <figure>
           <img src="card-energlow.jpg" alt="Energlow Fusion tin beside three benefits: coffee replacement, quality ingredients, calm alertness, not jittery buzz." width="900" height="900" loading="lazy">
@@ -363,7 +382,7 @@ footer a:hover{color:var(--accent)}
 
     <div class="sub">
       <h3 id="shop">Shop ads</h3>
-      <p>A mood headline, key ingredients and a clear call to action.</p>
+      <p>Each one has a headline, the main ingredients and a Shop Now button.</p>
       <div class="ads four">
         <figure>
           <img src="shop-petal.jpg" alt="Petal Fusion ad: A cup that blooms with flavour. Tastes like cordial. Feels like wellness. Shop Now button with the offer." width="900" height="900" loading="lazy">
@@ -385,6 +404,24 @@ footer a:hover{color:var(--accent)}
     </div>
   </section>
 
+  <section class="view" data-key="videos" aria-labelledby="videos">
+    <p class="label">Product videos</p>
+    <h2 id="videos">Product videos</h2>
+    <p>Videos I made for the Embedded Scheduler pages of the Cronofy developer docs, recorded in Loom with my own voiceover.</p>
+
+    <div class="sub">
+      <h3 id="scheduler-intro">Embedded Scheduler: introduction</h3>
+      <p>The video at the top of the <a href="https://docs.cronofy.com/developers/embedded-scheduler/">Embedded Scheduler docs</a>: what it does and how it fits into an app.</p>
+      <div class="video wide"><iframe src="https://www.youtube-nocookie.com/embed/dP49l5q1VEk" title="Cronofy Embedded Scheduler: introduction" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+    </div>
+
+    <div class="sub">
+      <h3 id="scheduler-install">Embedded Scheduler: install and embed</h3>
+      <p>I made the first half of this video, on the <a href="https://docs.cronofy.com/developers/embedded-scheduler/installing-and-embedding/">installing and embedding</a> page.</p>
+      <div class="video wide"><iframe src="https://www.youtube-nocookie.com/embed/sGmVH4ZH0Ys" title="Cronofy Embedded Scheduler: install and embed" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+    </div>
+  </section>
+
   <section class="view" data-key="writing" aria-labelledby="writing">
     <p class="label">Developer content</p>
     <h2 id="writing">Articles on dev.to</h2>
@@ -392,7 +429,7 @@ footer a:hover{color:var(--accent)}
     <div class="articles">
       <a class="article" id="push" href="https://dev.to/mariyafro/managing-calendar-event-changes-with-push-notifications-c1f">
         <strong>Managing calendar event changes with Push Notifications</strong>
-        <span>Why push beats polling, then the full flow step by step in Postman.</span>
+        <span>Why push notifications are better than polling, and how to set them up in Postman.</span>
         <span class="meta">28 Oct 2024 · 3 min read</span>
       </a>
       <a class="article" id="appcal" href="https://dev.to/mariyafro/application-calendars-55kc">
