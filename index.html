@@ -94,12 +94,15 @@ h1{font:700 clamp(2.5rem,5.5vw,3.75rem)/1.08 var(--display);margin:0;text-wrap:b
 section{display:grid;gap:22px}
 h2{font:700 clamp(2rem,4.5vw,2.6rem)/1.15 var(--display);margin:0;text-wrap:balance}
 h3{font:700 1.3rem/1.35 var(--display);margin:0;text-wrap:balance}
+h4{font:700 1.1rem/1.35 var(--display);margin:0;text-wrap:balance}
 .facts{display:flex;flex-wrap:wrap;gap:8px 36px;margin:0;padding-block:14px;border-block:1px solid var(--line)}
 .facts div{display:flex;align-items:baseline;gap:10px}
 .facts dt{font:400 .72rem var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--moss)}
 .facts dd{margin:0}
 .sub{display:grid;gap:16px;margin-top:20px;padding-top:36px;border-top:1px solid var(--line)}
-.sub h3+p{margin-top:-8px;color:var(--muted)}
+.sub h3+p,.sub h4+p{margin-top:-8px;color:var(--muted)}
+.vgroup{margin-top:20px;padding-top:36px;border-top:1px solid var(--line)}
+.vgroup+.sub{margin-top:0;padding-top:0;border-top:0}
 
 /* Figures */
 .ads{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:20px}
@@ -187,7 +190,7 @@ footer a:hover{color:var(--accent)}
       </ul>
     </div>
     <div class="group">
-      <a class="proj" href="#videos">Videos</a>
+      <a class="proj" href="#videos">Explainer videos</a>
       <ul>
         <li><a href="#scheduler-intro">Embedded Scheduler intro</a></li>
         <li><a href="#scheduler-install">Install and embed</a></li>
@@ -232,7 +235,7 @@ footer a:hover{color:var(--accent)}
             <span>How to turn an OK prompt into a tailored answer</span>
           </div>
           <div class="body">
-            <strong>Videos</strong>
+            <strong>Explainer videos</strong>
             <span class="desc">Short videos for a scheduling API's developer docs, and an explainer on getting better answers from AI.</span>
             <span class="more">Watch the videos <span aria-hidden="true">→</span></span>
           </div>
@@ -408,25 +411,29 @@ footer a:hover{color:var(--accent)}
   </section>
 
   <section class="view" data-key="videos" aria-labelledby="videos">
-    <p class="label">Videos</p>
-    <h2 id="videos">Videos</h2>
+    <p class="label">Video</p>
+    <h2 id="videos">Explainer videos</h2>
     <p>Videos I recorded in Loom with my own voiceover: two for the Embedded Scheduler pages of the Cronofy developer docs, and a short explainer on getting better answers from AI.</p>
 
+    <h3 class="vgroup" id="for-developers">For developers</h3>
+
     <div class="sub">
-      <h3 id="scheduler-intro">Embedded Scheduler: introduction</h3>
+      <h4 id="scheduler-intro">Embedded Scheduler: introduction</h4>
       <p>The video at the top of the <a href="https://docs.cronofy.com/developers/embedded-scheduler/">Embedded Scheduler docs</a>: what it does and how it fits into an app.</p>
       <div class="video wide"><iframe src="https://www.youtube-nocookie.com/embed/dP49l5q1VEk" title="Cronofy Embedded Scheduler: introduction" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
     </div>
 
     <div class="sub">
-      <h3 id="scheduler-install">Embedded Scheduler: install and embed</h3>
+      <h4 id="scheduler-install">Embedded Scheduler: install and embed</h4>
       <p>I made the first half of this video, on the <a href="https://docs.cronofy.com/developers/embedded-scheduler/installing-and-embedding/">installing and embedding</a> page.</p>
       <div class="video wide"><iframe src="https://www.youtube-nocookie.com/embed/sGmVH4ZH0Ys" title="Cronofy Embedded Scheduler: install and embed" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
     </div>
 
+    <h3 class="vgroup" id="for-everyone">For people who don't work in tech</h3>
+
     <div class="sub">
-      <h3 id="prompting">How to turn an OK prompt into a tailored answer</h3>
-      <p>A short explainer for people who don't work in tech. Using a meal plan as the example, it shows how adding details, rules and a goal to a prompt gets an answer that fits a lot better.</p>
+      <h4 id="prompting">How to turn an OK prompt into a tailored answer</h4>
+      <p>Using a meal plan as the example, it shows how adding details, rules and a goal to a prompt gets an answer that fits a lot better.</p>
       <div class="video wide loom"><iframe src="https://www.loom.com/embed/5906d72a89fc470492172f2e4698d539?hideEmbedTopBar=true" title="How to turn an OK prompt into a tailored answer" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
     </div>
   </section>
